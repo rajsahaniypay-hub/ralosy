@@ -174,10 +174,10 @@ export const founders: Founder[] = [
     id: "raj",
     slug: "raj-sahani",
     name: "Raj Sahani",
-    role: "Co-Founder · System Architect & Developer",
-    // Content sourced from https://rajsahani.com
+    role: "Co-Founder · BTech ECE Student",
+    // Content sourced from https://rajsahani.com (plus BTech ECE as confirmed by founders)
     shortBio:
-      "Bridging raw silicon performance and elegant software architecture. Based in Ahmedabad. Currently upgrading reality.",
+      "BTech ECE student bridging raw silicon performance and elegant software architecture. Based in Ahmedabad. Currently upgrading reality.",
     instagram: "@rajsahaniii",
     instagramUrl: "https://instagram.com/rajsahaniii",
     website: "https://rajsahani.com",
@@ -187,7 +187,7 @@ export const founders: Founder[] = [
     accent: "from-violet-400 to-cyan-400",
     details: [
       { label: "Base", value: "Ahmedabad" },
-      { label: "Identity", value: "Class 12 · Technologist" },
+      { label: "Education", value: "BTech ECE" },
       { label: "Role", value: "System Architect & Developer" },
       { label: "Hardware", value: "GPU · Homelab · Servers" },
       { label: "Software", value: ".NET · JS · Linux / VPS" },
@@ -244,8 +244,8 @@ export const founders: Founder[] = [
       },
       {
         year: "2025",
-        title: "Current State · Class 12",
-        body: "Mastering C# .NET architecture and Monero mining algorithms while preparing for computer engineering.",
+        title: "Current State · BTech ECE",
+        body: "Pursuing BTech in Electronics & Communication Engineering while mastering C# .NET architecture and Monero mining algorithms.",
       },
       {
         year: "2026",
@@ -265,7 +265,7 @@ export const founders: Founder[] = [
     sections: [
       {
         title: "Bio",
-        body: "Raj Sahani is an 18-year-old technologist and co-founder of Ralosy who refuses to accept hardware limitations. Based in Ahmedabad, he specializes in analyzing GPU architectures, building custom web platforms, and deploying enterprise-grade ERPs — bridging raw silicon performance with elegant software architecture.",
+        body: "Raj Sahani is a BTech ECE student, technologist, and co-founder of Ralosy who refuses to accept hardware limitations. Based in Ahmedabad, he specializes in analyzing GPU architectures, building custom web platforms, and deploying enterprise-grade ERPs — bridging raw silicon performance with elegant software architecture.",
       },
       {
         title: "Achievements",
