@@ -11,13 +11,13 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <span className="relative h-10 w-10 overflow-hidden rounded-xl ring-1 ring-cyan-400/30">
+            <span className="relative block h-10 w-10 overflow-hidden rounded-xl ring-1 ring-cyan-400/30">
               <Image
                 src="/logo.png"
                 alt="Ralosy logo"
                 fill
                 sizes="40px"
-                className="object-cover"
+                className="scale-[1.55] object-cover"
               />
             </span>
             <p className="font-[family-name:var(--font-display)] text-2xl font-semibold text-white">
