@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { FadeIn } from "@/components/motion";
@@ -33,10 +34,41 @@ export function Hero() {
         />
         <div className="absolute left-1/2 top-8 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(56,232,255,0.9)]" />
         <div className="absolute bottom-16 right-16 h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_14px_rgba(93,255,176,0.9)]" />
+
+        {/* Logo at the center of the orbit */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 animate-float"
+        >
+          <div className="relative h-full w-full overflow-hidden rounded-[2.2rem] shadow-[0_0_80px_rgba(56,232,255,0.35)] ring-1 ring-cyan-400/40">
+            <Image
+              src="/logo.png"
+              alt=""
+              fill
+              sizes="160px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </motion.div>
       </div>
 
       <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <FadeIn>
+          <div className="mb-8 flex items-center gap-4 lg:hidden">
+            <div className="relative h-16 w-16 overflow-hidden rounded-2xl shadow-[0_0_40px_rgba(56,232,255,0.35)] ring-1 ring-cyan-400/40">
+              <Image
+                src="/logo.png"
+                alt="Ralosy logo"
+                fill
+                sizes="64px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1.5 text-xs font-medium text-cyan-200">
             <Sparkles className="h-3.5 w-3.5" />
             Indian Tech · Education · Civic Empowerment

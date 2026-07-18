@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { InstagramIcon } from "@/components/icons";
 import { products } from "@/data/products";
@@ -9,9 +10,20 @@ export function Footer() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
-          <p className="font-[family-name:var(--font-display)] text-2xl font-semibold text-white">
-            Ralosy
-          </p>
+          <div className="flex items-center gap-3">
+            <span className="relative h-10 w-10 overflow-hidden rounded-xl ring-1 ring-cyan-400/30">
+              <Image
+                src="/logo.png"
+                alt="Ralosy logo"
+                fill
+                sizes="40px"
+                className="object-cover"
+              />
+            </span>
+            <p className="font-[family-name:var(--font-display)] text-2xl font-semibold text-white">
+              Ralosy
+            </p>
+          </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-zinc-400">
             Building the future of Indian Tech, Education, and Civic Empowerment.
           </p>

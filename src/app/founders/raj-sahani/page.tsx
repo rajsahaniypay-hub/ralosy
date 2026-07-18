@@ -8,27 +8,30 @@ const founder = getFounder("raj-sahani");
 export const metadata: Metadata = {
   title: "Raj Sahani",
   description:
-    "Raj Sahani — Co-Founder of Ralosy and BTech ECE student shaping systems and product direction.",
+    "Raj Sahani — Co-Founder of Ralosy. System architect & developer bridging hardware performance and software architecture. Based in Ahmedabad.",
   openGraph: {
     title: "Raj Sahani · Ralosy",
     description:
-      "Co-Founder of Ralosy. Engineering-minded builder focused on India-first technology.",
+      "System Architect & Developer. GPU systems, Linux ops, .NET, and India-first product engineering.",
   },
 };
 
 export default function RajSahaniPage() {
   if (!founder) notFound();
 
-  // TODO: Inject scraped / verified profile data from https://rajsahani.com
-  // Update src/data/founders.ts sections (Bio, Achievements, Vision) when ready.
-
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: founder.name,
-    jobTitle: "Co-Founder",
+    jobTitle: "Co-Founder · System Architect & Developer",
+    url: "https://rajsahani.com",
     worksFor: { "@type": "Organization", name: "Ralosy" },
-    sameAs: [founder.instagramUrl],
+    sameAs: [founder.instagramUrl, "https://rajsahani.com"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Ahmedabad",
+      addressCountry: "IN",
+    },
   };
 
   return (

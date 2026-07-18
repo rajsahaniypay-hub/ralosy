@@ -56,9 +56,6 @@ export const metadata: Metadata = {
     description:
       "Building the future of Indian Tech, Education, and Civic Empowerment.",
   },
-  icons: {
-    icon: "/favicon.svg",
-  },
 };
 
 const organizationJsonLd = {

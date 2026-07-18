@@ -8,11 +8,11 @@ const founder = getFounder("lovekush-yadav");
 export const metadata: Metadata = {
   title: "Lovekush Yadav",
   description:
-    "Lovekush Yadav — Co-Founder of Ralosy. Building futuristic Indian tech across safety, education, and civic impact.",
+    "Lovekush Yadav — Co-Founder of Ralosy. Class 12 product builder shipping Satark, Kaksha, and IndiaNow for Indian tech, education, and civic impact.",
   openGraph: {
     title: "Lovekush Yadav · Ralosy",
     description:
-      "Co-Founder of Ralosy. Interests in Science, Tech, Software Development, Investment, and Business.",
+      "Co-Founder of Ralosy. Science, tech, software, investment, and business — with a track record of shipping India-first products.",
   },
 };
 

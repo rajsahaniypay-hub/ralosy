@@ -9,9 +9,13 @@ export type Product = {
   size: "lg" | "md";
   mission: string;
   points: string[];
+  ctaLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
   upcoming?: boolean;
-  linkTree?: boolean;
   showSuggestion?: boolean;
+  flowSteps?: string[];
+  meta?: { label: string; value: string }[];
 };
 
 export const products: Product[] = [
@@ -55,19 +59,37 @@ export const products: Product[] = [
   },
   {
     id: "link",
-    title: "Link by Ralosy",
-    tagline: "The centralized hub for every Ralosy ecosystem connection.",
+    title: "Ralosy Link",
+    subtitle: "Alexa automation bridge · help@ralosy.com",
+    tagline:
+      "A bridge between your Echo / Alexa account and the rest of your world: webhooks, Home Assistant, IFTTT, APIs, schedules, and scripts.",
     href: "https://link.ralosy.com",
     domain: "link.ralosy.com",
     accent: "violet",
-    size: "md",
-    linkTree: true,
+    size: "lg",
+    ctaLabel: "Open Link",
+    secondaryHref: "https://link.ralosy.com/console",
+    secondaryLabel: "Open Console",
     mission:
-      "One sleek destination for routing, portfolio links, and product discovery across the Ralosy network.",
+      "Trigger Alexa routines, virtual doorbells, contact sensors, and announcements from anywhere — one GET/POST is enough. Sign in with Amazon; Ralosy Link never stores your password.",
     points: [
-      "All ecosystem products in one place",
-      "Founder & social routing",
-      "Link-tree style, built for speed",
+      "Virtual Alexa devices: doorbell, contact sensor, speaker / TTS",
+      "Trigger from HTTP URLs, webhooks, Home Assistant, IFTTT, curl",
+      "Announcements via /announce — Echo speaks through Routines",
+      "Flows, cron schedules, variables, media & API playground",
+      "Devices appear in the Alexa app after skill linking",
+      "Secure, revocable API tokens with activity logging",
+    ],
+    flowSteps: [
+      "App / Home Assistant / webhook",
+      "link.ralosy.com",
+      "AWS Lambda → Alexa skill",
+      "Your Echo / Alexa app",
+    ],
+    meta: [
+      { label: "Login", value: "Sign in with Amazon" },
+      { label: "Console", value: "link.ralosy.com/console" },
+      { label: "Support", value: "help@ralosy.com" },
     ],
   },
   {

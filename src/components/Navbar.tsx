@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -37,9 +38,15 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group flex items-center gap-2.5">
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl border border-cyan-400/40 bg-cyan-400/10 text-sm font-bold tracking-tight text-cyan-300 shadow-[0_0_24px_rgba(56,232,255,0.25)]">
-            R
-            <span className="pulse-ring absolute inset-0 rounded-xl" aria-hidden />
+          <span className="relative h-9 w-9 overflow-hidden rounded-xl shadow-[0_0_24px_rgba(56,232,255,0.3)] ring-1 ring-cyan-400/30 transition group-hover:shadow-[0_0_32px_rgba(56,232,255,0.45)]">
+            <Image
+              src="/logo.png"
+              alt="Ralosy logo"
+              fill
+              sizes="36px"
+              className="object-cover"
+              priority
+            />
           </span>
           <span className="font-[family-name:var(--font-display)] text-lg font-semibold tracking-tight text-white">
             Ralosy

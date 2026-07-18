@@ -19,7 +19,12 @@ export function Ecosystem() {
 
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {products.map((product, index) => (
-            <ProductCard key={product.id} product={product} index={index} />
+            <div
+              key={product.id}
+              className={product.id === "link" ? "md:col-span-2" : undefined}
+            >
+              <ProductCard product={product} index={index} />
+            </div>
           ))}
         </div>
       </div>
