@@ -40,8 +40,19 @@ export type Founder = {
   skills?: FounderSkill[];
   timeline?: FounderTimelineItem[];
   projects?: FounderHighlight[];
+  /** Ralosy products co-owned by both founders, rendered as a shared section. */
+  ecosystem?: FounderHighlight[];
   sections: { title: string; body: string }[];
 };
+
+/** Every Ralosy product is co-owned by both founders. */
+export const ralosyEcosystem: FounderHighlight[] = [
+  { label: "Satark", value: "Free, no-login scam-message checker for Indian citizens" },
+  { label: "Kaksha", value: "All-in-one education management for tuition centers and schools" },
+  { label: "Ralosy Link", value: "Alexa automation bridge — webhooks, Home Assistant, APIs" },
+  { label: "IndiaNow", value: "Upcoming civic reporting and empowerment platform" },
+  { label: "Ralosy Store", value: "Official founder-run ecommerce store at store.ralosy.com" },
+];
 
 export const founders: Founder[] = [
   {
@@ -61,7 +72,7 @@ export const founders: Founder[] = [
       { label: "Born", value: "Uttar Pradesh" },
       { label: "Lives", value: "Punjab" },
       { label: "Focus", value: "Product · Brand · Growth" },
-      { label: "Stack", value: "Satark · Kaksha · IndiaNow" },
+      { label: "Ownership", value: "Full Ralosy ecosystem (co-owned)" },
       { label: "Mode", value: "Ship fast, stay private-first" },
     ],
     interests: [
@@ -140,11 +151,10 @@ export const founders: Founder[] = [
       },
     ],
     projects: [
-      { label: "Satark", value: "Citizen scam-message checker" },
-      { label: "Kaksha", value: "Education management for India" },
-      { label: "IndiaNow", value: "Upcoming civic reporting platform" },
-      { label: "Brand", value: "@ralosyglobal product house" },
+      { label: "Brand", value: "@ralosyglobal product house identity" },
+      { label: "Product Direction", value: "Strategy and positioning across the Ralosy stack" },
     ],
+    ecosystem: ralosyEcosystem,
     sections: [
       {
         title: "Bio",
@@ -156,7 +166,7 @@ export const founders: Founder[] = [
       },
       {
         title: "Focus",
-        body: "From Satark’s scam defense to Kaksha’s zero-commission education ops and IndiaNow’s civic reporting, Lovekush works at the intersection of product strategy, brand, and long-term company building.",
+        body: "From Satark’s scam defense to Kaksha’s zero-commission education ops, IndiaNow’s civic reporting, and the founder-run Ralosy Store, Lovekush works at the intersection of product strategy, brand, and long-term company building. Every product in the Ralosy ecosystem is co-owned equally with co-founder Raj Sahani.",
       },
     ],
   },
@@ -181,7 +191,7 @@ export const founders: Founder[] = [
       { label: "Role", value: "System Architect & Developer" },
       { label: "Hardware", value: "GPU · Homelab · Servers" },
       { label: "Software", value: ".NET · JS · Linux / VPS" },
-      { label: "Brand", value: "Ralosy Co-Founder" },
+      { label: "Ownership", value: "Full Ralosy ecosystem (co-owned)" },
     ],
     interests: [
       "Hardware Architecture",
@@ -251,6 +261,7 @@ export const founders: Founder[] = [
       { label: "Silicon Lab", value: "GPU cluster for benchmarking research" },
       { label: "Dev Station", value: "VS environment optimized for .NET Core" },
     ],
+    ecosystem: ralosyEcosystem,
     sections: [
       {
         title: "Bio",
@@ -262,7 +273,7 @@ export const founders: Founder[] = [
       },
       {
         title: "Vision",
-        body: "Keep upgrading reality — expand into Artificial Intelligence and Decentralized Networks while building resilient, hardware-aware software that powers India-first products like Ralosy Link, Satark, and the wider ecosystem.",
+        body: "Keep upgrading reality — expand into Artificial Intelligence and Decentralized Networks while building resilient, hardware-aware software that powers India-first products like Ralosy Link, Satark, and the wider ecosystem. Every Ralosy product — from Satark to the Ralosy Store — is co-owned equally with co-founder Lovekush Yadav.",
       },
     ],
   },

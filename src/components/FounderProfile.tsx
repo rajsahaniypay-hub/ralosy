@@ -8,6 +8,7 @@ import {
   ExternalLink,
   Globe2,
   Heart,
+  Layers,
   MapPin,
   Sparkles,
 } from "lucide-react";
@@ -248,6 +249,35 @@ export function FounderProfile({ founder }: { founder: Founder }) {
                   </li>
                 ))}
               </ol>
+            </section>
+          </Reveal>
+        )}
+
+        {/* Ralosy ecosystem — co-owned */}
+        {founder.ecosystem && founder.ecosystem.length > 0 && (
+          <Reveal delay={0.15}>
+            <section className="mt-8 glow-border rounded-[2rem] p-6 sm:p-8">
+              <div className="mb-2 flex items-center gap-2">
+                <Layers className="h-4 w-4 text-cyan-300" />
+                <p className="section-eyebrow">Ralosy ecosystem — co-owned</p>
+              </div>
+              <p className="mb-5 text-sm leading-relaxed text-zinc-400">
+                Every Ralosy product is jointly owned and operated by both
+                founders.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {founder.ecosystem.map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-2xl border border-cyan-400/15 bg-cyan-400/[0.04] px-4 py-4 transition hover:border-cyan-400/30"
+                  >
+                    <p className="text-sm font-semibold text-white">
+                      {item.label}
+                    </p>
+                    <p className="mt-1 text-sm text-zinc-400">{item.value}</p>
+                  </div>
+                ))}
+              </div>
             </section>
           </Reveal>
         )}

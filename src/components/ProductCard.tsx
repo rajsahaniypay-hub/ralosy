@@ -7,6 +7,7 @@ import {
   GraduationCap,
   Landmark,
   Cpu,
+  ShoppingBag,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Product } from "@/data/products";
@@ -18,6 +19,7 @@ const icons = {
   kaksha: GraduationCap,
   link: Cpu,
   indianow: Landmark,
+  store: ShoppingBag,
 };
 
 const accentMap = {
@@ -44,6 +46,12 @@ const accentMap = {
     icon: "text-amber-300 bg-amber-400/10 border-amber-400/30",
     soft: "from-amber-500/15 via-transparent to-transparent",
     dot: "bg-amber-300/80 shadow-[0_0_8px_rgba(251,191,36,0.8)]",
+  },
+  rose: {
+    badge: "border-rose-400/30 bg-rose-400/10 text-rose-200",
+    icon: "text-rose-300 bg-rose-400/10 border-rose-400/30",
+    soft: "from-rose-500/15 via-transparent to-transparent",
+    dot: "bg-rose-300/80 shadow-[0_0_8px_rgba(251,113,133,0.8)]",
   },
 };
 

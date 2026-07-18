@@ -5,7 +5,7 @@ export type Product = {
   tagline: string;
   href: string;
   domain: string;
-  accent: "cyan" | "emerald" | "violet" | "amber";
+  accent: "cyan" | "emerald" | "violet" | "amber" | "rose";
   size: "lg" | "md";
   mission: string;
   points: string[];
@@ -108,6 +108,25 @@ export const products: Product[] = [
       "Category-based civic reporting",
       "Public accountability through visibility",
       "Help shape the final domain and features",
+    ],
+  },
+  {
+    id: "store",
+    title: "Ralosy Store",
+    subtitle: "Owned & operated by the Ralosy founders",
+    tagline: "The official Ralosy ecommerce store.",
+    href: "https://store.ralosy.com",
+    domain: "store.ralosy.com",
+    accent: "rose",
+    size: "md",
+    ctaLabel: "Visit store",
+    mission:
+      "A straightforward online store run directly by the Ralosy founders — curated products, honest pricing, and the same privacy-first standards as the rest of the ecosystem.",
+    points: [
+      "Curated catalog picked and managed by the founders",
+      "Secure checkout with trusted Indian payment gateways",
+      "India-first shipping and support",
+      "Part of the connected Ralosy ecosystem",
     ],
   },
 ];
