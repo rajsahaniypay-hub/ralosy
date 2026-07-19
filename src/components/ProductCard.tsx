@@ -9,7 +9,6 @@ import {
   Cpu,
   ShoppingBag,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import type { Product } from "@/data/products";
 import { SuggestionBox } from "@/components/SuggestionBox";
 import { Reveal } from "@/components/motion";
@@ -24,34 +23,24 @@ const icons = {
 
 const accentMap = {
   cyan: {
-    badge: "border-cyan-400/30 bg-cyan-400/10 text-cyan-200",
-    icon: "text-cyan-300 bg-cyan-400/10 border-cyan-400/30",
-    soft: "from-cyan-500/15 via-transparent to-transparent",
-    dot: "bg-cyan-300/80 shadow-[0_0_8px_rgba(56,232,255,0.8)]",
+    icon: "bg-[rgba(13,110,104,0.1)] text-brand",
+    bar: "bg-brand",
   },
   emerald: {
-    badge: "border-emerald-400/30 bg-emerald-400/10 text-emerald-200",
-    icon: "text-emerald-300 bg-emerald-400/10 border-emerald-400/30",
-    soft: "from-emerald-500/15 via-transparent to-transparent",
-    dot: "bg-emerald-300/80 shadow-[0_0_8px_rgba(93,255,176,0.8)]",
+    icon: "bg-[rgba(31,122,76,0.1)] text-[color:var(--success)]",
+    bar: "bg-[color:var(--success)]",
   },
   violet: {
-    badge: "border-violet-400/30 bg-violet-400/10 text-violet-200",
-    icon: "text-violet-300 bg-violet-400/10 border-violet-400/30",
-    soft: "from-violet-500/15 via-transparent to-transparent",
-    dot: "bg-violet-300/80 shadow-[0_0_8px_rgba(167,139,250,0.8)]",
+    icon: "bg-[rgba(10,63,60,0.1)] text-brand-deep",
+    bar: "bg-brand-deep",
   },
   amber: {
-    badge: "border-amber-400/30 bg-amber-400/10 text-amber-200",
-    icon: "text-amber-300 bg-amber-400/10 border-amber-400/30",
-    soft: "from-amber-500/15 via-transparent to-transparent",
-    dot: "bg-amber-300/80 shadow-[0_0_8px_rgba(251,191,36,0.8)]",
+    icon: "bg-[rgba(194,120,3,0.12)] text-accent",
+    bar: "bg-accent",
   },
   rose: {
-    badge: "border-rose-400/30 bg-rose-400/10 text-rose-200",
-    icon: "text-rose-300 bg-rose-400/10 border-rose-400/30",
-    soft: "from-rose-500/15 via-transparent to-transparent",
-    dot: "bg-rose-300/80 shadow-[0_0_8px_rgba(251,113,133,0.8)]",
+    icon: "bg-[rgba(180,70,70,0.1)] text-[#9f3d3d]",
+    bar: "bg-[#9f3d3d]",
   },
 };
 
@@ -66,89 +55,78 @@ export function ProductCard({
   const accent = accentMap[product.accent];
 
   return (
-    <Reveal delay={index * 0.08} className="h-full">
-      <motion.article
-        whileHover={{ scale: 1.01 }}
-        transition={{ type: "spring", stiffness: 280, damping: 22 }}
-        className={`glow-border group relative h-full overflow-hidden rounded-3xl p-6 sm:p-8 ${
-          product.size === "lg" ? "min-h-[340px]" : "min-h-[280px]"
+    <Reveal delay={index * 0.06} className="h-full">
+      <article
+        className={`panel panel-interactive group relative h-full overflow-hidden p-6 sm:p-8 ${
+          product.size === "lg" ? "min-h-[300px]" : "min-h-[260px]"
         }`}
       >
-        <div
-          className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${accent.soft}`}
-        />
+        <div className={`absolute inset-x-0 top-0 h-1 ${accent.bar}`} />
         <div className="relative flex h-full flex-col">
           <div className="mb-5 flex flex-wrap items-start justify-between gap-3">
             <div className="flex items-center gap-3">
               <span
-                className={`inline-flex h-11 w-11 items-center justify-center rounded-2xl border ${accent.icon}`}
+                className={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${accent.icon}`}
               >
                 <Icon className="h-5 w-5" />
               </span>
               <div>
                 <div className="flex flex-wrap items-center gap-2">
-                  <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-white sm:text-2xl">
+                  <h3 className="text-display text-xl font-bold text-ink sm:text-2xl">
                     {product.title}
                   </h3>
                   {product.upcoming && (
-                    <span
-                      className={`rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${accent.badge}`}
-                    >
+                    <span className="rounded-md bg-[rgba(194,120,3,0.12)] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-accent">
                       Upcoming
                     </span>
                   )}
                 </div>
                 {product.subtitle && (
-                  <p className="mt-0.5 text-xs text-zinc-500">
-                    {product.subtitle}
-                  </p>
+                  <p className="mt-0.5 text-xs text-muted">{product.subtitle}</p>
                 )}
               </div>
             </div>
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[11px] text-zinc-400">
+            <span className="rounded-md bg-[rgba(20,40,36,0.04)] px-2.5 py-1 text-[11px] font-medium text-muted">
               {product.domain}
             </span>
           </div>
 
-          <p className="text-base font-medium text-zinc-100">{product.tagline}</p>
-          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+          <p className="text-base font-semibold text-ink">{product.tagline}</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted">
             {product.mission}
           </p>
 
           {product.meta && product.meta.length > 0 && (
-            <div className="mt-5 grid gap-2 sm:grid-cols-3">
+            <dl className="mt-5 grid gap-3 border-y border-[rgba(20,40,36,0.08)] py-4 sm:grid-cols-3">
               {product.meta.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2.5"
-                >
-                  <p className="text-[10px] uppercase tracking-[0.16em] text-zinc-500">
+                <div key={item.label}>
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
                     {item.label}
-                  </p>
-                  <p className="mt-1 truncate text-xs font-medium text-zinc-200">
+                  </dt>
+                  <dd className="mt-1 truncate text-sm font-medium text-ink">
                     {item.value}
-                  </p>
+                  </dd>
                 </div>
               ))}
-            </div>
+            </dl>
           )}
 
           {product.flowSteps && product.flowSteps.length > 0 && (
             <div className="mt-5 overflow-x-auto">
-              <div className="flex min-w-max items-center gap-2">
+              <ol className="flex min-w-max items-center gap-2 text-sm">
                 {product.flowSteps.map((step, i) => (
-                  <div key={step} className="flex items-center gap-2">
-                    <span className="rounded-full border border-violet-400/30 bg-violet-400/10 px-3 py-1.5 text-xs font-medium text-violet-100">
+                  <li key={step} className="flex items-center gap-2">
+                    <span className="rounded-md bg-[rgba(13,110,104,0.08)] px-3 py-1.5 font-medium text-brand-deep">
                       {step}
                     </span>
                     {i < product.flowSteps!.length - 1 && (
-                      <span className="text-violet-300/60" aria-hidden>
+                      <span className="text-muted" aria-hidden>
                         →
                       </span>
                     )}
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ol>
             </div>
           )}
 
@@ -156,10 +134,10 @@ export function ProductCard({
             {product.points.map((point) => (
               <li
                 key={point}
-                className="flex gap-2 text-sm leading-snug text-zinc-400"
+                className="flex gap-2 text-sm leading-snug text-muted"
               >
                 <span
-                  className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${accent.dot}`}
+                  className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${accent.bar}`}
                 />
                 {point}
               </li>
@@ -173,7 +151,7 @@ export function ProductCard({
               href={product.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-ghost group/cta inline-flex text-sm"
+              className="btn-secondary group/cta inline-flex text-sm"
             >
               {product.ctaLabel ??
                 (product.upcoming ? "Preview domain" : "Open product")}
@@ -184,7 +162,7 @@ export function ProductCard({
                 href={product.secondaryHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-400/10 px-4 py-2 text-sm font-medium text-violet-100 transition hover:border-violet-300/50 hover:shadow-[0_0_24px_rgba(139,124,255,0.25)]"
+                className="inline-flex items-center gap-2 rounded-lg bg-brand-deep px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand"
               >
                 {product.secondaryLabel ?? "Secondary"}
                 <ArrowUpRight className="h-4 w-4" />
@@ -192,7 +170,7 @@ export function ProductCard({
             )}
           </div>
         </div>
-      </motion.article>
+      </article>
     </Reveal>
   );
 }
