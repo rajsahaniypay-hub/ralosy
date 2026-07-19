@@ -44,30 +44,30 @@ export function SuggestionBox() {
   }
 
   return (
-    <div className="mt-5 rounded-2xl border border-amber-300/20 bg-amber-400/5 p-4 sm:p-5">
-      <div className="mb-3 flex items-center gap-2 text-amber-200">
+    <div className="mt-5 rounded-xl border border-[rgba(194,120,3,0.2)] bg-[rgba(194,120,3,0.06)] p-4 sm:p-5">
+      <div className="mb-3 flex items-center gap-2 text-accent">
         <Lightbulb className="h-4 w-4" />
         <p className="text-sm font-semibold">Suggestion Box</p>
       </div>
-      <p className="mb-4 text-xs leading-relaxed text-zinc-400">
+      <p className="mb-4 text-xs leading-relaxed text-muted">
         Help name the product and shape features. Suggestions are saved on this
         device for now.
       </p>
 
       <form onSubmit={onSubmit} className="space-y-3">
         <label className="block">
-          <span className="mb-1.5 block text-xs text-zinc-400">
+          <span className="mb-1.5 block text-xs font-medium text-muted">
             Preferred domain
           </span>
           <input
             value={domain}
             onChange={(e) => setDomain(e.target.value)}
             placeholder="indianow.ralosy.com or improveindia.ralosy.com"
-            className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2.5 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-amber-300/40 focus:shadow-[0_0_20px_rgba(251,191,36,0.15)]"
+            className="w-full rounded-lg border border-[rgba(20,40,36,0.12)] bg-white px-3 py-2.5 text-sm text-ink outline-none transition placeholder:text-[rgba(90,107,103,0.55)] focus:border-brand"
           />
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-xs text-zinc-400">
+          <span className="mb-1.5 block text-xs font-medium text-muted">
             Feature idea
           </span>
           <textarea
@@ -75,12 +75,12 @@ export function SuggestionBox() {
             onChange={(e) => setIdea(e.target.value)}
             rows={3}
             placeholder="What should citizens be able to report or track?"
-            className="w-full resize-none rounded-xl border border-white/10 bg-black/40 px-3 py-2.5 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-amber-300/40 focus:shadow-[0_0_20px_rgba(251,191,36,0.15)]"
+            className="w-full resize-none rounded-lg border border-[rgba(20,40,36,0.12)] bg-white px-3 py-2.5 text-sm text-ink outline-none transition placeholder:text-[rgba(90,107,103,0.55)] focus:border-brand"
           />
         </label>
         <button
           type="submit"
-          className="w-full rounded-xl border border-amber-300/30 bg-amber-300/15 px-4 py-2.5 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/25 hover:shadow-[0_0_24px_rgba(251,191,36,0.2)]"
+          className="w-full rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-white transition hover:brightness-105"
         >
           Submit suggestion
         </button>
@@ -92,7 +92,7 @@ export function SuggestionBox() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
-            className="mt-3 flex items-center gap-2 text-sm text-emerald-300"
+            className="mt-3 flex items-center gap-2 text-sm font-medium text-[color:var(--success)]"
           >
             <CheckCircle2 className="h-4 w-4" />
             Saved — thank you for shaping IndiaNow.

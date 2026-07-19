@@ -66,7 +66,7 @@ export const founders: Founder[] = [
     instagramUrl: "https://instagram.com/lovekushyadavvv",
     initials: "LY",
     image: "/founders/lovekush.png",
-    accent: "from-cyan-400 to-emerald-400",
+    accent: "from-teal-600 to-emerald-500",
     details: [
       { label: "Date of Birth", value: "3 August 2007" },
       { label: "Born", value: "Uttar Pradesh" },
@@ -184,7 +184,7 @@ export const founders: Founder[] = [
     websiteLabel: "rajsahani.com",
     initials: "RS",
     image: "/founders/raj.png",
-    accent: "from-violet-400 to-cyan-400",
+    accent: "from-teal-700 to-amber-500",
     details: [
       { label: "Base", value: "Ahmedabad" },
       { label: "Education", value: "BTech ECE" },
