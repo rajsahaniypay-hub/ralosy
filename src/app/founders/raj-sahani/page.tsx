@@ -9,10 +9,12 @@ export const metadata: Metadata = {
   title: "Raj Sahani",
   description:
     "Raj Sahani — Co-Founder of Ralosy and BTech ECE student. System architect & developer bridging hardware performance and software architecture. Based in Ahmedabad.",
+  alternates: { canonical: "/founders/raj-sahani" },
   openGraph: {
     title: "Raj Sahani · Ralosy",
     description:
       "BTech ECE student · System Architect & Developer. GPU systems, Linux ops, .NET, and India-first product engineering.",
+    url: "/founders/raj-sahani",
   },
 };
 

@@ -198,14 +198,14 @@ export function FounderProfile({ founder }: { founder: Founder }) {
                 {founder.awards.map((award) => (
                   <article
                     key={award.title}
-                    className="rounded-xl bg-[rgba(194,120,3,0.06)] p-5"
+                    className="rounded-xl bg-[rgba(154,84,16,0.08)] p-5"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <h3 className="text-display text-base font-bold text-ink">
                         {award.title}
                       </h3>
                       {award.year && (
-                        <span className="shrink-0 rounded-md bg-[rgba(194,120,3,0.14)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent">
+                        <span className="shrink-0 rounded-md bg-[rgba(154,84,16,0.14)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent">
                           {award.year}
                         </span>
                       )}
