@@ -1,0 +1,7 @@
+Bricolage Grotesque ExtraBold
+Copyright 2022 The Bricolage Grotesque Project Authors (https://github.com/ateliertriay/bricolage)
+Licensed under the SIL Open Font License, Version 1.1. See OFL.txt.
+
+Figtree SemiBold
+Copyright 2022 The Figtree Project Authors (https://github.com/erikdkennedy/figtree)
+Licensed under the SIL Open Font License, Version 1.1. The license text in OFL.txt applies.

@@ -44,7 +44,7 @@ export function SuggestionBox() {
   }
 
   return (
-    <div className="mt-5 rounded-xl border border-[rgba(194,120,3,0.2)] bg-[rgba(194,120,3,0.06)] p-4 sm:p-5">
+    <div className="mt-5 rounded-xl border border-[rgba(154,84,16,0.28)] bg-[rgba(154,84,16,0.08)] p-4 sm:p-5">
       <div className="mb-3 flex items-center gap-2 text-accent">
         <Lightbulb className="h-4 w-4" />
         <p className="text-sm font-semibold">Suggestion Box</p>

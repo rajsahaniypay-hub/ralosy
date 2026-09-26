@@ -11,8 +11,9 @@
   --brand: #0d6e68;
   --brand-deep: #0a3f3c;
   --brand-soft: rgba(13, 110, 104, 0.1);
-  --accent: #c27803;
-  --accent-soft: rgba(194, 120, 3, 0.12);
+  /* White on #9A5410 is 5.75:1. #9A5410 on #EEF3F1 is 5.13:1. */
+  --accent: #9a5410;
+  --accent-soft: rgba(154, 84, 16, 0.12);
   --ink: #0f1c1a;
   --success: #1f7a4c;
 }
@@ -26,8 +27,21 @@
   --color-brand-deep: var(--brand-deep);
   --color-accent: var(--accent);
   --color-ink: var(--ink);
-  --font-sans: var(--font-body);
-  --font-display: var(--font-display);
+  --font-sans: var(--font-body), ui-sans-serif, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, sans-serif;
+
+  --text-display-sm: 1.5rem;
+  --text-display-sm--line-height: 1.05;
+  --text-display-sm--letter-spacing: -0.03em;
+  --text-display-md: 2.5rem;
+  --text-display-md--line-height: 0.95;
+  --text-display-md--letter-spacing: -0.04em;
+  --text-display-lg: 4.5rem;
+  --text-display-lg--line-height: 0.9;
+  --text-display-lg--letter-spacing: -0.045em;
+
+  --spacing-header: 4rem;
+  --spacing-gutter: 1rem;
 }
 
 * {
@@ -54,7 +68,7 @@ body {
 .bg-atmosphere {
   background:
     radial-gradient(ellipse 90% 70% at 85% 10%, rgba(13, 110, 104, 0.16), transparent 55%),
-    radial-gradient(ellipse 60% 50% at 0% 90%, rgba(194, 120, 3, 0.08), transparent 50%),
+    radial-gradient(ellipse 60% 50% at 0% 90%, rgba(154, 84, 16, 0.1), transparent 50%),
     linear-gradient(165deg, #f7faf8 0%, #e8f0ed 42%, #eef3f1 100%);
 }
 
@@ -70,7 +84,7 @@ body {
   pointer-events: none;
   position: fixed;
   inset: 0;
-  z-index: 50;
+  z-index: 30;
   opacity: 0.028;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");

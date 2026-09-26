@@ -35,7 +35,7 @@ const accentMap = {
     bar: "bg-brand-deep",
   },
   amber: {
-    icon: "bg-[rgba(194,120,3,0.12)] text-accent",
+    icon: "bg-[rgba(154,84,16,0.12)] text-accent",
     bar: "bg-accent",
   },
   rose: {
@@ -76,7 +76,7 @@ export function ProductCard({
                     {product.title}
                   </h3>
                   {product.upcoming && (
-                    <span className="rounded-md bg-[rgba(194,120,3,0.12)] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-accent">
+                    <span className="rounded-md bg-[rgba(154,84,16,0.12)] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-accent">
                       Upcoming
                     </span>
                   )}

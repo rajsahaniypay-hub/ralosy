@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Figtree } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { siteDescription, siteName, siteTitle, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({
@@ -16,21 +17,20 @@ const body = Figtree({
   weight: ["400", "500", "600", "700"],
 });
 
-const siteUrl = "https://ralosy.com";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ralosy — Indian Tech, Education & Civic Empowerment",
+    default: siteTitle,
     template: "%s · Ralosy",
   },
-  description:
-    "Ralosy builds the future of Indian tech — Satark scam protection, Kaksha education ops, Link hub, and IndiaNow civic tools.",
+  description: siteDescription,
   keywords: [
     "Ralosy",
     "Satark",
     "Kaksha",
+    "Ralosy Link",
     "IndiaNow",
+    "Ralosy Store",
     "Indian tech",
     "scam checker",
     "education management",
@@ -38,17 +38,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: siteUrl,
-    siteName: "Ralosy",
-    title: "Ralosy — Building the future of Indian Tech",
-    description:
-      "Premium products for scam defense, education, and civic empowerment across India.",
+    siteName,
+    title: siteTitle,
+    description: siteDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ralosy",
-    description:
-      "Building the future of Indian Tech, Education, and Civic Empowerment.",
   },
 };
 
@@ -57,6 +52,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "Ralosy",
   url: siteUrl,
+  logo: `${siteUrl}/logo.svg`,
   sameAs: ["https://instagram.com/ralosyglobal"],
   description:
     "Building the future of Indian Tech, Education, and Civic Empowerment.",
@@ -82,7 +78,7 @@ export default function RootLayout({
         <div className="grain" aria-hidden />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-brand focus:px-3 focus:py-2 focus:text-white"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-brand-deep focus:px-3 focus:py-2 focus:text-white"
         >
           Skip to content
         </a>

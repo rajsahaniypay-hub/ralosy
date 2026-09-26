@@ -9,10 +9,12 @@ export const metadata: Metadata = {
   title: "Lovekush Yadav",
   description:
     "Lovekush Yadav — Co-Founder of Ralosy. Class 12 product builder shipping Satark, Kaksha, and IndiaNow for Indian tech, education, and civic impact.",
+  alternates: { canonical: "/founders/lovekush-yadav" },
   openGraph: {
     title: "Lovekush Yadav · Ralosy",
     description:
       "Co-Founder of Ralosy. Science, tech, software, investment, and business — with a track record of shipping India-first products.",
+    url: "/founders/lovekush-yadav",
   },
 };
 
